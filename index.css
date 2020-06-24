@@ -1,0 +1,127 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+/* ALL ID Styling */
+#calculator {
+  width: 320px;
+  height: 520px;
+  background-color: #eaedef;
+  /* margin: 0 autho centers image in browser */
+  margin: 0 auto;
+  /* top and position relative give a little space at the top */
+  top: 20px;
+  position: relative;
+  /* border radius for curved edges */
+  border-radius: 5px;
+  /* two shadows built in. Use inspect in browser to play with box-shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#container {
+  widows: 1000px;
+  height: 550px;
+  /* top and bottom have 20px margin. Auto center the div horizontally */
+  margin: 20px auto;
+  background-color: #c9daf0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #919191;
+}
+
+#keyboard {
+  height: 400px;
+}
+
+#output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
+}
+
+#result {
+  height: 120px;
+}
+
+/* All Class Styling */
+.operator,
+.number,
+.empty {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  /* float left = moves button to left and fit within container */
+  float: left;
+  /* border-radius 50% gives circular display */
+  border-radius: 50%;
+  /* border-width 0 removes broder */
+  border-width: 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.number,
+.empty {
+  background-color: #eaedef;
+}
+
+.number,
+.operator {
+  /* when hovering over numbers & operators, pointer turns to hadn symbol */
+  cursor: pointer;
+}
+
+.operator:active,
+.number:active {
+  font-size: 11px;
+}
+
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
+
+button:nth-child(1) {
+  background-color: LIGHTGRAY;
+}
+button:nth-child(2) {
+  background-color: LIGHTGRAY;
+}
+button:nth-child(3) {
+  background-color: LIGHTGRAY;
+}
+
+button:nth-child(4) {
+  font-size: 20px;
+  background-color: #20b2aa;
+}
+
+button:nth-child(8) {
+  font-size: 20px;
+  background-color: #ffa500;
+}
+
+button:nth-child(12) {
+  font-size: 20px;
+  background-color: #f08080;
+}
+
+button:nth-child(16) {
+  font-size: 20px;
+  background-color: #7d93e0;
+}
+
+button:nth-child(20) {
+  font-size: 20px;
+  background-color: #9477af;
+}
