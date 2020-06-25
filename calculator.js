@@ -28,3 +28,5 @@ const getFormattedNumber = (num) => {
 const reverseNumberFormat = (num) => {
   return Number(num.replace(/,/g, ""));
 };
+
+let operator = document.getElementsByClassName("operator");
