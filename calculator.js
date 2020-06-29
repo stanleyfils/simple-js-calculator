@@ -30,3 +30,8 @@ const reverseNumberFormat = (num) => {
 };
 
 let operator = document.getElementsByClassName("operator");
+for (let i = 0; i < operator.length; i++) {
+  operator[i].addEventListener("click", function () {
+    alert("the operator clicked:" + this.id);
+  });
+}
