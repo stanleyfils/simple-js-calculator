@@ -39,5 +39,7 @@ let number = document.getElementsByClassName("number");
 for (let i = 0; i < number.length; i++) {
   number[i].addEventListener("click", function () {
     alert("the number clicked:" + this.id);
+
+    let output = reverseNumberFormat(getOutput());
   });
 }
