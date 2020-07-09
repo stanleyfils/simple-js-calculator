@@ -52,6 +52,10 @@ for (let i = 0; i < operator.length; i++) {
         output = output.substring(0, output.length - 1);
         printOutput(output);
       }
+    } else {
+      if (output != "") {
+        output = reverseNumberFormat(output);
+      }
     }
   });
 }
