@@ -53,6 +53,8 @@ for (let i = 0; i < operator.length; i++) {
         printOutput(output);
       }
     } else {
+      let output = getOutput();
+      let history = getHistory();
       if (output != "") {
         output = reverseNumberFormat(output);
       }
