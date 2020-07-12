@@ -24,6 +24,9 @@ const printOutput = (num) => {
 
 // this function reads the mth number and returns the number as a comma formatted number using toLocaleString and "en" as a parameter
 const getFormattedNumber = (num) => {
+  if (num == "-") {
+    return "";
+  }
   let n = Number(num);
   let value = n.toLocaleString("en");
 
@@ -55,8 +58,26 @@ for (let i = 0; i < operator.length; i++) {
     } else {
       let output = getOutput();
       let history = getHistory();
-      if (output != "") {
-        output = reverseNumberFormat(output);
+      // if you click an operator, you can't use the backspace button or click = for a result. The following code allows you to use backspace on operators, replace an operator, or click = to get the result of what is already entered.
+      if (output == "" && history != "") {
+        if (isNaN(history[history.length - 1])) {
+          history = history.substring(0, history.length - 1);
+        }
+      }
+      if (output != "" || history != "") {
+        // If history is not empty and output is empty, set output to an empty value using a conditional statement.
+        output = output == "" ? output : reverseNumberFormat(output);
+        history = history + output;
+        if (this.id == "=") {
+          let result = eval(history);
+          printOutput(result);
+          // pass history parameter to keep histroy after clciking equal sign. Insert empty quotes ("") if you want histroy to delete after clicking equal sign.
+          printHistory(history);
+        } else {
+          history = history + this.id;
+          printHistory(history);
+          printOutput("");
+        }
       }
     }
   });
