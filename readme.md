@@ -1,4 +1,4 @@
-![](images/final-calculator-image.png)
+![](images/calculator.png)
 
 JavaScript calculator created via Code Spot tutorial.
 
